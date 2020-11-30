@@ -88,8 +88,8 @@ const apiRequest = {"0":
   });
 });
 
-describe('/GET /', () => {
-  it('it should be 404 error as the route doesnt exist', (done) => {
+describe('/GET /login', () => {
+  it('it should be 404 error as the route /login doesnt exist', (done) => {
     chai.request(API_URL)
         .get('/login')
         .end((err, res) => {

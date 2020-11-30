@@ -209,6 +209,7 @@ Running test :
 ```
 npm test
 ```
+
 ```
 /POST /child-setter
 √ it should get place the sort the children to their parent using parent_id
@@ -216,8 +217,8 @@ npm test
 /GET /
 √ it should provide an array of github repositories
 
-/GET /
-√ it should be 404 error as the route doesnt exist
+/GET /login
+√ it should be 404 error as the route /login doesnt exist
 
 3 passing (56ms)
 ```
