@@ -209,7 +209,7 @@ Running test :
 ```
 npm test
 ```
-
+```
 /POST /child-setter
 √ it should get place the sort the children to their parent using parent_id
 
@@ -220,5 +220,6 @@ npm test
 √ it should be 404 error as the route doesnt exist
 
 3 passing (56ms)
+```
 
 **Expectation** : 3/3 tests are passing
