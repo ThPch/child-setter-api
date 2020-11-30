@@ -8,7 +8,7 @@ const routes = []
 
 // POST /child-setter
 routes.push({
-  path: API_PATH + '/',
+  path: API_PATH + '/child-setter',
   method: 'POST',
   handler: apiCtrl.childSetterCtrl
 })

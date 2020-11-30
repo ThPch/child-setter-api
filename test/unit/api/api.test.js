@@ -74,7 +74,7 @@ const apiRequest = {"0":
   * Test the /GET route
   */
  describe('/GET /', () => {
-  it('it should provide an array of github repository', (done) => {
+  it('it should provide an array of github repositories', (done) => {
     chai.request(API_URL)
         .get('/')
         .end((err, res) => {
