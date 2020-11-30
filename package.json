@@ -15,7 +15,7 @@
     "yarn": ">=0.27.5"
   },
   "scripts": {
-    "start": "nodemon -r dotenv index.js",
+    "start": "node -r dotenv index.js",
     "test": "mocha \"test/**/*.js\""
   },
   "dependencies": {
