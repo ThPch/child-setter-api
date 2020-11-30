@@ -1,7 +1,7 @@
 {
   "app": {
-    "port": "3000",
-    "name": "childrensetter-api",
+    "port": "5000",
+    "name": "child-setter-api",
     "logLevel": "info"
   }
 }

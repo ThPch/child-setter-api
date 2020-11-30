@@ -8,7 +8,7 @@ const config = require('config')
 const routes = require('./routes')
 
 const server = Hapi.server({
-  port: process.env.APP_PORT,
+  port: config.get('app.port'),
   host: 'localhost',
   routes: { cors:
     {
