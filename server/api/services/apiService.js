@@ -12,6 +12,10 @@ require('dotenv').config();
 
 const MyOctokit = Octokit.plugin(paginateRest);
 
+/**
+* initOctokit() initialisation of Octokit
+* @param
+*/
 const initOctokit = async () => {
   try{
     return new MyOctokit({
@@ -29,6 +33,11 @@ const initOctokit = async () => {
 
 const octokit = initOctokit();
 
+
+/**
+* getRepoByTag() getting results from the Github's API
+* @param { tag, nbPages } tag is the keywoard used to search and nbPages is the number of grouped page for the results
+*/
 const getRepoByTag = async (tag="nodejs", nbPages=10) => {
   const data = await octokit.paginate(`GET /search/repositories?q=${tag}&per_page=${nbPages}`,
     (response) => response.data.map((issue) => {
@@ -43,7 +52,10 @@ const getRepoByTag = async (tag="nodejs", nbPages=10) => {
   return data;
 }
 
-//Trying to emulate the fetching from the Github's API with official results
+/**
+* getRepoByTag2() getting results from a data.json file but this is official results fetched through the Github's API
+* @param
+*/
 const getRepoByTag2 = () => {
   return dataGit.items.map((issue) => {
     return {
@@ -56,8 +68,11 @@ const getRepoByTag2 = () => {
 }
 
 
+/**
+* childSetter() placing properly children object to their parents using their parent_id
+* @param { arr } arr is the array received by the payload, see the documentations for more information
+*/
 const childSetter = (arr) => {
-
   let temp = [];
 
   for(let key in arr){

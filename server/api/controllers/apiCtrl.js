@@ -3,8 +3,12 @@
 const httpStatus = require('http-status')
 const apiService = require('../services/apiService')
 
-const childSetterCtrl = async (req, res) => {
 
+/**
+* childSetterCtrl() controller that should check if there is a payload
+* @param { req, res } req is the http request and res the response
+*/
+const childSetterCtrl = async (req, res) => {
   try {
     if(!!req.payload){
        let payload = req.payload
@@ -22,12 +26,14 @@ const childSetterCtrl = async (req, res) => {
   }
 }
 
+/**
+* getReposByTagCtrl() controller s
+* @param { req, res } req is the http request and res the response
+*/
 const getReposByTagCtrl = async (req, res) =>{
   try{
-
     const data = await apiService.getRepoByTag2()
     return data
-
   }
   catch (error) {
 
